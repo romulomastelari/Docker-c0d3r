@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="uft-8">
+
+        <title>E-mail Sender CURSO DOCKER</title>
+
+        <style>
+            #princip{
+                border: solid;
+                text-align: center;
+                border-color: blue;
+                border-radius: 15px;
+                width: 405px;
+                margin: 0 auto;
+                background-color: #d7d7d726;
+            }
+            #h1zin{
+                text-align: center;
+            }
+            label { display: block; }
+            textarea, input { border-radius: 5px; width: 300px; }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="princip">
+        <h1 id="h1zin">E-mail Sender</h1>
+        <form action="http://localhost:/api" method="POST">
+            <div>
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto">
+            </div>
+
+            <div>
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" cols="50" rows="6"></textarea>
+            </div>
+
+            <div>
+                <button>Enviar !</button>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
