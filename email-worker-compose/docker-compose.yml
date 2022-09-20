@@ -45,6 +45,8 @@ services:
     depends_on:
       - db
       - queue
+    environment:
+     - DB_NAME=sender
   queue:
     image: redis:3.2
     networks:
@@ -60,3 +62,5 @@ services:
       - fila
     depends_on:
       - queue
+    environment:
+      - PYTHONUNBUFFERED=1

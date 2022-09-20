@@ -1,44 +1,71 @@
 <html>
-    <head>
-        <meta charset="uft-8">
+  <head>
+    <meta charset="uft-8" />
 
-        <title>E-mail Sender CURSO DOCKER</title>
+    <title>E-mail Sender CURSO DOCKER</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
 
-        <style>
-            #princip{
-                border: solid;
-                text-align: center;
-                border-color: blue;
-                border-radius: 15px;
-                width: 405px;
-                margin: 0 auto;
-                background-color: #d7d7d726;
-            }
-            #h1zin{
-                text-align: center;
-            }
-            label { display: block; }
-            textarea, input { border-radius: 5px; width: 300px; }
-        </style>
-    </head>
-    <body>
-        <div class="container" id="princip">
-        <h1 id="h1zin">E-mail Sender</h1>
-        <form action="http://localhost:/api" method="POST">
-            <div>
-                <label for="assunto">Assunto</label>
-                <input type="text" name="assunto">
-            </div>
-
-            <div>
-                <label for="mensagem">Mensagem</label>
-                <textarea name="mensagem" cols="50" rows="6"></textarea>
-            </div>
-
-            <div>
-                <button>Enviar !</button>
-            </div>
-        </form>
+    <style>
+      #princip {
+        border: solid;
+        text-align: center;
+        width: 405px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-image: linear-gradient(45deg, gold, deeppink) 1;
+        clip-path: inset(0px round 10px);
+        animation: huerotate 6s infinite linear;
+        filter: hue-rotate(360deg);
+      }
+      @keyframes huerotate {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rorate(360deg);
+        }
+      }
+      #h1zin {
+        text-align: center;
+        color: white;
+      }
+      label {
+        display: block;
+        color: white;
+      }
+      textarea,
+      input {
+        border-radius: 5px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body style="background: #222;">
+    <div class="container" id="princip" class="border-image">
+      <h1 id="h1zin">E-mail Sender</h1>
+      <form action="http://localhost:/api" method="POST">
+        <div>
+          <label for="assunto">Assunto</label>
+          <input type="text" name="assunto" class="form-control" />
         </div>
-    </body>
+
+        <div>
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            name="mensagem"
+            cols="50"
+            rows="6"
+            class="form-control"
+          ></textarea>
+        </div>
+        <br />
+        <div>
+          <button class="btn btn-success">Enviar !</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
